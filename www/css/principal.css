@@ -1,0 +1,57 @@
+body, html{
+    background-color: #efe785 !important;
+    height: 100%; 
+    width: 100%;
+}
+
+#abajo{
+    position:fixed;
+    width: 100%;
+    bottom: 3px;
+}
+
+#arriba{
+    margin-top: 2%;
+}
+
+#centro{
+}
+
+.retraso-1{
+    -webkit-animation-delay: .2s;
+    -moz-animation-delay: .2s;
+    animation-delay: .2s;
+}
+
+.retraso-2{
+    -webkit-animation-delay: .5s;
+    -moz-animation-delay: .5s;
+    animation-delay: .5s;
+}
+
+#imgm{
+    display: none;
+    
+}
+
+#imgp{
+    display: none;
+}
+
+#imgpr{
+    display: none;
+}
+
+#imgv{
+    display: none;
+}
+
+#imgc{
+    top:37%; 
+    position:fixed; 
+    cursor:pointer;
+    width: 70%;
+    height: 150px;
+    
+    margin-left: 14% !important;
+}

@@ -1,0 +1,82 @@
+header h1{
+    color: #fe4014;
+    text-align: center;
+    font-family: Times New Roman;
+    margin-top: 5%;
+}
+div{
+    background-color: #fe4014;
+	height: 10px;
+	margin: 0 auto;
+    margin-top: 0px;
+
+}
+#sec1{
+background-color: rgba(226, 217, 217, 0.5);
+     margin-top: 10px;
+    height: 190px;
+    width: 98%;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+#as1 h5{
+    color: white;
+    background-color: black;
+    width: 23%;
+    padding: 0px;
+   
+    float: right;
+}
+img{
+    width: 15%;
+    float: left;
+     height: 80px;
+}
+#sec1>#car{
+    float: right;
+    width: 10%;
+    margin-top: -10px;
+    padding: 0px;
+    margin: 0 auto;
+   
+}
+#as2 h5{
+    color: white;
+    background-color: #fe4014;
+    
+}
+#sec2{
+background-color: rgba(226,217, 217,0.5);
+     margin-top: 10px;
+    height: 190px;
+    width: 98%;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+#asa1 h5{
+    color: white;
+    background-color: black;
+    width: 23%;
+    padding: 0px;
+   
+    float: right;
+}
+#img2{
+    width: 15%;
+    float: left;
+    height: 60px;
+    height: 80px;
+}
+#asa2 h5{
+    color: white;
+    background-color: #fe4014;
+    
+}
+#sec2>#car2{
+    float: right;
+    width: 10%;
+    margin-top: -10px;
+    padding: 0px;
+    margin: 0 auto;
+   
+}

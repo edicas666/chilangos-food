@@ -1,0 +1,42 @@
+body, html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #efe785;
+}
+header{
+    color: #fe4014;
+    text-align: center;
+    font-family: Times New Roman;
+    
+    margin-top: 10%;
+}
+#principal{
+    margin-left: 2%;
+}
+hr{
+   color: #fe4014;
+      background-color: #fe4014;
+      height: 10px;
+}
+
+.inp{
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 9%;
+}
+
+label{
+    font-family: Times New Roman;
+    
+}
+
+.form-group{
+    margin-top: 10%;
+}
+
+#btnE{
+    margin-left: 56%;
+    margin-top: 10%;
+}

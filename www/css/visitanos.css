@@ -1,0 +1,26 @@
+body, html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #efe785;
+}
+header{
+    color: #fe4014;
+    text-align: center;
+    font-family: Times New Roman;
+    margin-top: 15%;
+}
+
+
+hr{
+color: #fe4014;
+background-color: #fe4014;
+height: 10px;
+}
+
+#s2{
+	height: 100%;
+	margin: 0 auto;
+    margin-top: 20%;
+
+}
