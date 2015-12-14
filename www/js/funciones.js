@@ -53,10 +53,9 @@ function clicklogo() {
 //Base de Datos
 var conexion;
 
-function inicializar(){
+function inicializar(e){
         conexion = openDatabase('comida','1.0','Chilangos_Food',2*1024*1024);//2*1024*1024 = 2MB
         crearTablas();
-    
         insertarProductos(1, "Hamburguesa", "../img/hamburguesa.png","Hamburguesa de arrachera", 25.00, 5);
         insertarProductos(2, "Torta", "../img/torta.png","Torta de Queso, jamon y chorizo", 30.00, 5);
         insertarProductos(3, "Alitas", "../img/alitas.png","Alitas adobadas con picante", 20.00, 5);
@@ -87,8 +86,8 @@ function crearTablas(){
                     "id_ventas text primary key,"+
                     "folio_pedido text,"+
                     "id_producto text,"+
-                    "total double,+
-                    "fecha_venta)"
+                    "total double,"+
+                    "fecha_venta txt)"
                 );
             }
         );
@@ -99,12 +98,11 @@ function crearTablas(){
                     "create table if not exists usuarios("+
                     "id_usuario text primary key,"+
                     "password text,"+
-                    "email text,"
-                    "fecha_registro)"
+                    "email text,"+
+                    "fecha_registro text)"
                 );
             }
         );
-        
 }
 
 function insertarProductos(id,nombre,url,desc,precio,exist){

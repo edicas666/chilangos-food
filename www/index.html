@@ -21,7 +21,7 @@
         </style>
     </head>
 
-    <body onload="inicializar()">
+    <body beforeonload="inicializar()">
         <header class="animated zoomIn retraso-1">
     <h1>
     <strong>
@@ -52,6 +52,7 @@
 <script>
     var form = document.getElementById('formSesion');
     form.submit();
+    window.onload = inicializar();
     function buscarUsuario(){
         var id = document.getElementById("nomIni").value;
         var pass = document.getElementById('contraIni').value;
