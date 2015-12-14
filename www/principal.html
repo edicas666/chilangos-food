@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="./hg_files/bootstrap.min.css">
+        <meta charset="UTF-8">
+        <title>Chilango's Food</title>
+        <link rel="icon" href="../www/img/logo.png">
+        <link rel="stylesheet" href="../www/css/principal.css">
+        <link rel="stylesheet" href="../www/css/animate.css">
+        <script src = "../www/js/funciones.js"></script>
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+        <style>
+       
+                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+       
+        </style>
+    </head>
+    <body>
+       <div id="panelMaster">
+            <div id="panel">
+                <a href="./index.html" class="btn btn-info btnP">Salir</a>
+                <a href="./modificarUsuario.html" class="btn btn-info btnP">Mod. Cuenta</a>
+                <a href="./eliminarUsuario.html" class="btn btn-info btnP">Elim. Cuenta</a>
+            </div>
+            <div>
+            <button id="btnPanel" type="button" class="btn btn-success" onclick="btnpanel()">>></button>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div id = "arriba" class="row">
+                <a href="html/productos.html"><img id = "imgm" src="./img/menu.png"></a>
+                <img id = "imgp" src="./img/estadistica.png">
+            </div>
+            <div class="row">
+                <img onclick = "clicklogo()" id = "imgc" src="./img/logo.png" class="animated zoomIn retraso-1">
+            </div>
+            <div id = "abajo" class="row">
+                <img id = "imgpr"src="./img/PROMOCIONES.png">
+                <a href="html/visitanos.html"><img id = "imgv"src="./img/Visitanos.png"></a>
+            </div>
+        </div>
+</body>
+</html>

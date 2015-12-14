@@ -7,6 +7,28 @@
  *
  * Copyright (c) 2015 Daniel Eden
  */
+#panel {
+  background-color: #90d174;
+  border: 4px solid #7aa069;
+  height: 155px;
+  width: 120px;
+  display: inline-block;
+  text-align: center;
+  background-color: #ebadad;
+}
+#panelMaster {
+  margin-top: 20%;
+  position: fixed;
+  left: -120px;
+  display: inline-flex;
+}
+.btnP {
+  margin-top: 10px;
+  background-color: rgba(220, 20, 60, 0.87) !important;
+}
+#btnPanel {
+  margin-top: 60px;
+}
 
 .animated {
   -webkit-animation-duration: 1s;
@@ -14,6 +36,19 @@
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
+
+.footer{
+    position: fixed;
+    bottom: 0 !important;
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 10px;
+    width: 100%;
+    margin: 0;
+    height: 50px;
+    background-color: rgba(255, 127, 80, 0.76);
+}
+
 
 .animated.infinite {
   -webkit-animation-iteration-count: infinite;
@@ -138,6 +173,24 @@
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
+}
+
+.retraso-1{
+    -webkit-animation-delay: .2s;
+    -moz-animation-delay: .2s;
+    animation-delay: .2s;
+}
+
+.retraso-2{
+    -webkit-animation-delay: .5s;
+    -moz-animation-delay: .5s;
+    animation-delay: .5s;
+}
+
+.retraso-3{
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
 }
 
 @keyframes pulse {

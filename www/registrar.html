@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+    <title>Registrar</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/bootstrap.min.js" ></script>
+    <script src="bootstrap/js/bootstrap.js" ></script>
+    <script src="js/funciones.js"></script>
+    <link rel="stylesheet" href="css/registrar.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="icon" href="img/logo.png">
+</head>
+<body>
+    <header class="animated zoomIn retraso-1">
+    <h1>
+    <strong>
+        REGISTRAR
+    </strong>
+    </h1>
+    <hr>
+   </header>
+      <form action="#" id="formReg">
+          <div id="contenedor"class="container-fluid animated zoomIn retraso-3 col-xs-offset-1" style="height: 87%;">
+           <div class="row">
+              Nombre: <br>
+              <input id="nomReg" type="text" placeholder="edicas666" class="col-xs-10" required>
+              <br> <br>
+              Contraseña: <br>
+              <input id="contrareg" type="password" placeholder="123" class="col-xs-10" required>
+              <br> <br>
+              Email: <br>
+              <input id="emailReg" type="email" placeholder="edicas666@gmail.com" class="col-xs-10" required>
+              <br> <br>
+               <a class="btn btn-success col-xs-offset-1" id="regresar" href="index.html">Regresar</a>
+               <input type="submit" class="btn btn-info" id="aceptarReg" value="Aceptar" onclick="registrar()">
+           </div>
+      </form>
+       </div>
+       <div class="row footer">
+       </div>
+</body>
+</html>
+<script>
+    window.onload = inicializar();
+    var form = document.getElementById('formReg');
+    form.submit();
+    function registrar(){
+        var form = document.getElementById('formReg');
+        var id = document.getElementById('nomReg').value;
+        var pass = document.getElementById('contrareg').value;
+        var email = document.getElementById('emailReg').value;
+        var btn = document.getElementById('aceptarReg');
+        var ret = document.getElementById('regresar');
+        if(id.length!=0 && pass.length!=0 && email.length!=0){
+            conexion = openDatabase('comida','1.0','Chilangos_Food',2*1024*1024);//2*1024*1024 = 2MB
+            conexion.transaction(
+                    function(bd){
+                        bd.executeSql("insert into usuarios values(?,?,?)",[id,pass,email],function(){alert('Registro Exitoso! Bienvenido! ');form.action = "../www/principal.html"; window.location="principal.html";}, function(){alert('Error en el registro');});
+                    }
+                );
+        }
+    }
+    
+</script>

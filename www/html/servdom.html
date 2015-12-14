@@ -1,54 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
-    <title>Servicio A Domicilio</title>
+    <title>Domicilio</title>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <script src="../bootstrap/js/bootstrap.min.js" ></script>
     <script src="../bootstrap/js/bootstrap.js" ></script>
     <script src="../js/funciones.js"></script>
-    <link rel="stylesheet" href="../css/servdom.css">
+    <link rel="stylesheet" href="../css/domicilio.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="icon" href="../img/logo.png">
 </head>
 <body>
-   <header>
+   
+    <header class="animated zoomIn retraso-1">
     <h1>
     <strong>
-        SERVICIO A DOMICILIO
+        DATOS DE DOMICILIO
     </strong>
     </h1>
     <hr>   
    </header>
-   <div id = "principal" class = "container-fluid row">
-         <form class="form-horizontal cols-xs-12">
-          <div class="form-group">
-            <label class="col-xs-2 control-label">Telefono:</label>
-            <div class="col-xs-10">
-              <input class = "inp" type="text" class="form-control" placeholder="Tel o Cel">
-            </div>
-          </div>
-         <div class="form-group">
-            <label class="col-xs-2 control-label">Dirección:</label>
-            <div class="col-xs-10">
-              <input class = "inp" type="text" class="form-control" placeholder="Calle, Numero y Colonia">
-            </div>
-          </div>
-           <div class="form-group">
-            <label class="col-xs-2 control-label">Referencias:</label>
-            <div class="col-xs-10">
-              <input class = "inp" type="text" class="form-control" placeholder="A un costado de casa rosa">
-            </div>
-          </div>
-           <div class="form-group">
-            <label class="col-xs-2 control-label">Nombre:</label>
-            <div class="col-xs-10">
-              <input class = "inp" type="text" class="form-control" placeholder="Isai Gomez Luviano">
-            </div>
-          </div>
-     <button type="submit" id = "btnE" class="btn btn-primary">Siguiente</button>
-        </form>
-   </div>
-    
+       <div id="contenedor"class="container-fluid animated zoomIn retraso-3 col-xs-offset-1" style="height: 78%;">
+          <div style="height:40px;"></div>
+           <div class="row" style="height:auto;">
+              Telefono: <br>
+              <input type="tel" class="col-xs-11" required>
+              <br> <br>
+              Direccion: <br>
+              <input type="text" class="col-xs-11" required>
+              <br> <br>
+              Referencia: <br>
+              <textarea name="" id="" cols="35" rows="7" required></textarea>
+           </div>
+       </div>
+       <div class="row footer">
+               <a class="btn btn-danger" href="pedidos.html">Regresar</a>
+               <a class="btn btn-success" href="pago.html">Siguiente</a>
+       </div>
 </body>
 </html>

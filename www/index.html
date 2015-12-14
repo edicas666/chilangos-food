@@ -6,7 +6,9 @@
        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="./hg_files/bootstrap.min.css">
         <meta charset="UTF-8">
-        <title>Blank App Designer Packaged Web App Project Template</title>
+        <title>Iniciar Sesión</title>
+        <link rel="stylesheet" href="css/inicioSesion.css">
+        <link rel="icon" href="../www/img/logo.png">
         <link rel="stylesheet" href="css/principal.css">
         <link rel="stylesheet" href="css/animate.css">
         <script src = "js/funciones.js"></script>
@@ -17,62 +19,61 @@
                 @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
        
         </style>
-
-        <link rel="stylesheet" href="./hg_files/app.css">
-        <link rel="stylesheet" type="text/css" href="./hg_files/index_main.less.css" class="main-less">
-
-        <script src="file:///C:/Users/SONY/Documents/Chilangos_Food/www/cordova.js" id="xdkJScordova_"></script>
-
-        <script src="./hg_files/app.js"></script>
-
-        <script src="./hg_files/init-app.js"></script>
-
-        <script src="./hg_files/init-dev.js"></script>
-
-        <script type="application/javascript" src="./hg_files/jquery.min.js"></script>
-        <script type="application/javascript" src="./hg_files/marginal-position.min.js"></script>
-        <script type="application/javascript" src="./hg_files/index_user_scripts.js"></script>
-        <script type="application/javascript" src="./hg_files/bs_subpage.js"></script>
     </head>
 
-    <body>
-
-        <div class="upage hidden" id="Menu">
-            <div class="upage-outer">
-                <div class="uib-header header-bg container-group inner-element uib_w_1" data-uib="layout/header" data-ver="0">
-                    <h2></h2>
-                    <div class="widget-container wrapping-col single-centered"></div>
-                    <div class="widget-container content-area horiz-area wrapping-col left"></div>
-                    <div class="widget-container content-area horiz-area wrapping-col right"></div>
-                </div>
-                <div class="upage-content ac0 content-area vertical-col left" style="top: 0px;">
-                    <button class="btn widget uib_w_2 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="btnprueba">Button</button>
-                </div>
-            </div>
-        </div>
-        <div class="upage vertical-col left hidden" id="Pedidos"></div>
-        <div class="upage vertical-col left hidden" id="Promociones"></div>
-        <div class="upage vertical-col left hidden" id="Visitanos"></div>
-        <div class="upage vertical-col left hidden" id="Home">
-            <div class="btn-group uib-bs-flex widget uib_w_3 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
-                <button class="btn widget btn-default uib_w_4" data-uib="twitter%20bootstrap/button" data-ver="1">Button</button>
-                <button class="btn widget btn-default uib_w_5" data-uib="twitter%20bootstrap/button" data-ver="1">Button</button>
-                <button class="btn widget btn-default uib_w_6" data-uib="twitter%20bootstrap/button" data-ver="1">Button</button>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div id = "arriba" class="row">
-                <img id = "imgm" src="./img/menu.png">
-                <img id = "imgp" src="./img/PIDE.png">
-            </div>
-            <div class="row">
-                <img onclick = "clicklogo()" id = "imgc" src="./img/logo.png" class="animated zoomIn retraso-1">
-            </div>
-            <div id = "abajo" class="row">
-                <img id = "imgpr"src="./img/PROMOCIONES.png">
-                <a href="html/visitanos.html"><img id = "imgv"src="./img/Visitanos.png"></a>
-            </div>
-        </div>
-    
-
-</body></html>
+    <body onload="inicializar()">
+        <header class="animated zoomIn retraso-1">
+    <h1>
+    <strong>
+        Iniciar Sesión
+    </strong>
+    </h1>
+    <hr>   
+   </header>
+      <form action="#" id="formSesion">
+          <div id="contenedor"class="container-fluid animated zoomIn retraso-3 col-xs-offset-1" style="height: 87%;">
+           <div class="row"> <br>
+              Usuario: <br> 
+              <input id="nomIni" type="text" class="col-xs-10" value="" required>
+              <br><br> 
+              Contraseña: <br> 
+              <input id="contraIni" type="password" class="col-xs-10" required value="">
+              <br> <br>
+              
+               <a class="btn btn-info" href="registrar.html">Registrarse</a>
+               <input class="btn btn-success col-xs-offset-1" id="btnSesion" type="submit" value="Iniciar Sesión" onclick="buscarUsuario()">
+           </div>
+       </div>
+      </form>
+       <div class="row footer">
+       </div>
+</body>
+</html>
+<script>
+    var form = document.getElementById('formSesion');
+    form.submit();
+    function buscarUsuario(){
+        var id = document.getElementById("nomIni").value;
+        var pass = document.getElementById('contraIni').value;
+        if(id.length!=0 && pass.length!=0){
+            var conexion = openDatabase('comida','1.0','Chilangos_Food',2*1024*1024);//2*1024*1024 = 2MB
+            conexion.transaction(
+                function(bd){
+                    bd.executeSql("Select * From usuarios where id_usuario= ? and password= ?",
+                        [id,pass],
+                        function(bd,res){
+                            var tam = res.rows.length;
+                            if(tam>0){
+                                form.action = "../www/principal.html";
+                                window.location = "principal.html";
+                            }else{
+                                alert("Usuario o contraseña incorrectas");
+                            }
+                        }
+                    );
+                }
+            );
+        }
+    }
+        
+</script>

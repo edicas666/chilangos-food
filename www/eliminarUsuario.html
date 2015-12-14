@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="./hg_files/bootstrap.min.css">
+        <meta charset="UTF-8">
+        <title>Iniciar Sesión</title>
+        <link rel="stylesheet" href="css/inicioSesion.css">
+        <link rel="icon" href="../www/img/logo.png">
+        <link rel="stylesheet" href="css/principal.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <script src = "js/funciones.js"></script>
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+        <style>
+       
+                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+       
+        </style>
+
+    </head>
+
+    <body onload="inicializar()">
+        <header class="animated zoomIn retraso-1">
+        <h1>
+        <strong>
+            Eliminar mi cuenta
+            </strong>
+        </h1>
+        <hr>   
+       </header>
+        <form action="#" id="formModificar">
+        <div id="contenedor"class="container-fluid animated zoomIn retraso-3 col-xs-offset-1" style="height: 87%;">
+           <div class="row"> <br>
+              <br><br>
+              Usuario: <br> 
+              <input id="nomEli" type="text" class="col-xs-10" value="" required>
+              <br><br> 
+              Contraseña: <br> 
+              <input id="contraEli" type="password" class="col-xs-10" required value="">
+              <br> <br>
+               <a class="btn btn-info" href="./principal.html">Regresar</a>
+               <input class="btn btn-success col-xs-offset-1" id="btnEliminar" type="submit" value="Eliminar" onclick="eliminarUsuario()">
+           </div>
+        </div>
+        </form>
+        <div class="row footer">
+        </div>
+</body>
+</html>

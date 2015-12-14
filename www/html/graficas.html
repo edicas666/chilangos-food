@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+    <title>Graficas</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src="../bootstrap/js/bootstrap.min.js" ></script>
+    <script src="../bootstrap/js/bootstrap.js" ></script>
+    <script src="../js/funciones.js"></script>
+    <link rel="stylesheet" href="../css/visitanos.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="icon" href="../img/logo.png">
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="grafica.js">
+    </script>
+</head>
+<body>
+    <header class="animated zoomIn retraso-1">
+    <h1>
+    <strong>
+       CANTIDAD DE PLATILLOS EXISTENTES
+    </strong>
+    </h1>
+    <hr>   
+   </header>
+      <form action="../index.html">
+       <div id="contenedor"class="container-fluid animated zoomIn retraso-3" style="height: 98%%;">
+            <!--Comienza-->
+            <div id="id"class="row" style="box-shadow: 0px 0px 10px black; width:100%; margin:0 auto; margin-top: 10px; margin-bottom: 10px; padding:5px;">
+   <input id="caja1" type="text" value="">
+   <button type="button" onclick=" drawChart()">enviar</button>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+
+            </div>
+            <hr>
+            <!--Termina-->
+            </div>
+            <!--Espacio del footer-->
+            <div style="height: 50px;"></div>
+            <div class="row footer">
+                   <a class="btn btn-danger" href="index.html">Regresar</a>
+                   <input type="submit" class="btn btn-success" value="Siguiente">
+            </div>
+         </form>
+</body>
+</html>
