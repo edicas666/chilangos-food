@@ -172,7 +172,7 @@ function escogioProducto(){
 }
 
 function modificarUsuario(){
-        var conexion = openDatabase('comida','1.0','Chilangos_Food',2*1024*1024);//2*1024*1024 = 2MB
+        var conexion = openDatabase('comida','1.0','Chilangos_Food',2*1024*1024);
         var found = false;
         conexion.transaction(
             function(bd){
