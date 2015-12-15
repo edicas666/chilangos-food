@@ -57,10 +57,10 @@ function inicializar(e){
         conexion = openDatabase('comida','1.0','Chilangos_Food',2*1024*1024);//2*1024*1024 = 2MB
         crearTablas();
         insertarProductos(1, "Hamburguesa", "../img/hamburguesa.png","Hamburguesa de arrachera", 25.00, 5);
-        insertarProductos(2, "Torta", "../img/torta.png","Torta de Queso, jamon y chorizo", 30.00, 5);
-        insertarProductos(3, "Alitas", "../img/alitas.png","Alitas adobadas con picante", 20.00, 5);
-        insertarProductos(4, "Costillitas", "../img/costillitas.png","Costillitas a la BBQ con picante", 40.00, 5);
-        insertarProductos(5, "Gordita", "../img/gordita.png","Gordita especial rellena de carnitas", 15.00, 5);
+        insertarProductos(2, "Torta", "../img/torta.png","Torta de Queso, jamon y chorizo", 30.00);
+        insertarProductos(3, "Alitas", "../img/alitas.png","Alitas adobadas con picante", 20.00);
+        insertarProductos(4, "Costillitas", "../img/costillitas.png","Costillitas a la BBQ con picante", 40.00);
+        insertarProductos(5, "Gordita", "../img/gordita.png","Gordita especial rellena de carnitas", 15.00);
 }
 
 function crearTablas(){
@@ -72,9 +72,7 @@ function crearTablas(){
                     "nombre text,"+
                     "url_img,"+
                     "descripcion text,"+
-                    "precio double,"+
-                    "existentes int,"+
-                    "fecha_caducidad)"
+                    "precio double)"
                 );
             }
         );
@@ -105,10 +103,10 @@ function crearTablas(){
         );
 }
 
-function insertarProductos(id,nombre,url,desc,precio,exist){
+function insertarProductos(id,nombre,url,desc,precio){
         conexion.transaction(
             function(bd){
-                bd.executeSql("insert into productos values(?,?,?,?,?,?)",[id,nombre,url,desc,precio,exist]);
+                bd.executeSql("insert into productos values(?,?,?,?,?)",[id,nombre,url,desc,precio],ok,error);
             }
         );
 }

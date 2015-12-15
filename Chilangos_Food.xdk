@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.webapp",
       "src": "webapp/template-blank-ad-project/sample.zip",
       "projectGuid": "63197339-5cb1-4f10-b88c-75757b449ede",
-      "lastModifiedDate": 1449646656917,
+      "lastModifiedDate": 1450143442837,
       "creationDate": 1449646644343
     },
     "XDK-app-designer": "true",
@@ -26,11 +26,13 @@
         "preferences_": {
           "android-minSdkVersion": "14",
           "android-targetSdkVersion": "19",
-          "android-installLocation": "auto"
+          "android-installLocation": "auto",
+          "Orientation": "portrait",
+          "android-signed": true
         },
         "isActive_": true,
         "appName_": "Chilangos_Food",
-        "appID_": "xdk.intel.blank.ad.template.crosswalk",
+        "appID_": "Chilangos Food",
         "appAccess_": {
           "mode": "legacy",
           "network": [
@@ -39,17 +41,71 @@
           "intents": [],
           "navigation": []
         },
-        "icons_": [],
-        "splashes_": [],
+        "icons_": [
+          {
+            "relPath": "img/iconoldpi.png",
+            "density": "ldpi",
+            "height": 36,
+            "width": 36
+          },
+          {
+            "relPath": "img/iconomdpi.png",
+            "density": "mdpi",
+            "height": 48,
+            "width": 48
+          },
+          {
+            "relPath": "img/iconohdpi.png",
+            "density": "hdpi",
+            "height": 72,
+            "width": 72
+          },
+          {
+            "relPath": "img/iconoxhdpi.png",
+            "density": "xhdpi",
+            "height": 96,
+            "width": 96
+          }
+        ],
+        "splashes_": [
+          {
+            "relPath": "img/splashldpi.png",
+            "density": "ldpi",
+            "height": 426,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "img/splashmdpi.png",
+            "density": "mdpi",
+            "height": 470,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "img/splashhdpi.png",
+            "density": "hdpi",
+            "height": 640,
+            "width": 480,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "img/splashxhdpi.png",
+            "density": "xhdpi",
+            "height": 960,
+            "width": 720,
+            "orientation": "portrait"
+          }
+        ],
         "addlPermissions_": "",
         "excludedLibraries_": "",
         "iosProvs_": [],
         "cordovaCLIVersion_": "5.1.1",
         "crosswalkVersion_": "15",
-        "appVersion_": "0.0.1",
-        "appAuthor_": "Intel XDK",
-        "appDescription_": "Template to develop a packaged mobile web app using the App Designer UI editor.",
-        "appVersionCode_": "1"
+        "appVersion_": "1.0",
+        "appAuthor_": "TeamTec",
+        "appDescription_": "servicio de comida a domicilio",
+        "appVersionCode_": "2"
       },
       "Android": {
         "platform_": "android",
@@ -71,8 +127,62 @@
           "intents": [],
           "navigation": []
         },
-        "icons_": [],
-        "splashes_": [],
+        "icons_": [
+          {
+            "relPath": "img/iconoldpi.png",
+            "density": "ldpi",
+            "height": 36,
+            "width": 36
+          },
+          {
+            "relPath": "img/iconomdpi.png",
+            "density": "mdpi",
+            "height": 48,
+            "width": 48
+          },
+          {
+            "relPath": "img/iconohdpi.png",
+            "density": "hdpi",
+            "height": 72,
+            "width": 72
+          },
+          {
+            "relPath": "img/iconoxhdpi.png",
+            "density": "xhdpi",
+            "height": 96,
+            "width": 96
+          }
+        ],
+        "splashes_": [
+          {
+            "relPath": "img/splashldpi.png",
+            "density": "ldpi",
+            "height": 426,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "img/splashmdpi.png",
+            "density": "mdpi",
+            "height": 470,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "img/splashhdpi.png",
+            "density": "hdpi",
+            "height": 640,
+            "width": 480,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "img/splashxhdpi.png",
+            "density": "xhdpi",
+            "height": 960,
+            "width": 720,
+            "orientation": "portrait"
+          }
+        ],
         "addlPermissions_": "",
         "excludedLibraries_": "",
         "iosProvs_": [],
