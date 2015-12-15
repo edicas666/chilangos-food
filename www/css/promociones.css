@@ -3,10 +3,9 @@ body, html{
     width: 100%;
     margin: 0;
     background-color: #efe785;
+    text-align: center;
 }
 header{
-    color: #fe4014;
-    text-align: center;
     font-family: Times New Roman;
 }
 
@@ -18,28 +17,58 @@ hr{
     color: #fe4014;
     background-color: #fe4014;
     height: .6em;
+    width: 100%;
     margin: 0;
 }
-#text{
-    width: 110%;
+strong{
     font-family: Times New Roman;
-    font-size: 20px;
+    font-size: 30px;
+    text-align: center;
+    color: #fe4014;
     
 }
 
 
-
-
-#promo > img{
-    margin-top: 10%;
-    margin-left: 2%;
-    width: 105%;
-    border: 5px solid green;
-    border-radius: 10px;
-    background-color: rgba(245, 20, 20, 0.74);
+#principal{
+    width: 100%;
+    font-family: Times New Roman;
+    
 }
 
-#btno{
+#promo{
+    position: relative;
     margin-top: 10%;
-    margin-left: 3%;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: yellow 5px 5px 5px;
+}
+#promo li{
+    background-color: rgba(245, 20, 20, 0.74);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#slider li img{
+width: 100%;
+}
+
+#promo > img{
+}
+
+#footer{
+    position: fixed;
+    bottom: 0px !important;
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 10px;
+    width: 100%;
+    margin: 0;
+    height: 50px;
+    background-color: rgba(255, 127, 80, 0.76);
+}
+.otras{
+    display: none;
+    
+   
 }

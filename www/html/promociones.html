@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="../css/animate.css">
     <link rel="icon" href="../img/logo.png">
     <link rel="stylesheet" href="../css/promociones.css">
+    <script src="../js/promociones.js"></script>
 </head>
-<body class = "container row">
+<body>
     <header class="animated zoomIn retraso-1">
     <h1>
     <strong>
@@ -20,25 +21,139 @@
     </h1>
     <hr>   
    </header>
-    <div id = "text">
-       <h3>
+    <div id = "principal">
+      <div id = "text">
+       <h3 id="dia">
             <strong>
-            Hoy Es:
+            Hoy
     
-       <script> 
-    var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
-    var f=new Date();
-    document.write(diasSemana[f.getDay()]);
-    </script>
+       
             </strong>
       </h3> 
        
     </div>
     
     <div id = "promo">
-        <img src="../img/gorditas.png" alt="">
+    <ul>
+        <li name="a2">
+            <img src="../img/hoyno.png" alt="" >
+        </li>
+        <div name="a2">
+            <img class = "sobre" src="../img/alitas1.png" alt="">
+        </div>
+        <div name="a2">
+            <img class = "sobre" src="../img/gorditas.png" alt="">
+        </div>
+        <li name="a2">
+            <img class = "sobre" src="../img/tortas1.png" alt="">
+        </li>
+    </ul>
     </div>
-    <input id = "btno" class = "btn btn-success col-xs-3" type="button" value = "Otros Dias">
+    <div style = "margin-top:90%;">
+        
+    </div>
+    <br>
+    
+    <div class = "otras" >
+        <img src="../img/gorditas.png" alt="">
+    <br>
+    <hr>
+    </div>
+    
+    <br>
+    <div class = "otras">
+        <img src="../img/alitas1.png" alt="">
+        <br>
+    <hr>
+    </div>
+    
+    <br>
+    <div class = "otras">
+        <img src="../img/tortas1.png" alt="">
+    </div>
+    
+    
+    
+    
+    <div style="text-align:rigth;" id="footer">
+        
+       <a class="btn btn-danger" href="../principal.html">Regresar</a>
+       <input id = "btno" class = "btn btn-success" type="button" value = "Otros Dias" onclick="mostrar()">    
+    
+    </div>
+        
+    </div>
+     
 </body>
     
 </html>
+<script> 
+            var diasSemana = new Array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sábado");
+    var f=new Date();
+    document.getElementById("dia").innerHTML = "Hoy " +     diasSemana[f.getDay()];
+    //document.write(diasSemana[f.getDay()]);
+           
+           if(diasSemana[f.getDay()]=="Martes"){
+               
+            var n = document.getElementsByName('a2');
+              
+               n[3].style.display = "none";
+               n[0].style.display = "none";
+               n[1].style.display = "none";
+               
+               }
+     if(diasSemana[f.getDay()]=="Lunes"){
+               
+            var n = document.getElementsByName('a2');
+              
+               n[1].style.display = "none";
+               n[2].style.display = "none";
+               n[3].style.display = "none";
+               
+               }else{
+          
+               if(diasSemana[f.getDay()]=="Jueves"){
+                var n = document.getElementsByName('a2');
+              
+               n[0].style.display = "none";
+               n[2].style.display = "none";
+               n[3].style.display = "none";
+                   }
+           }
+    if(diasSemana[f.getDay()]=="Miercoles"){
+                var n = document.getElementsByName('a2');
+              
+               n[1].style.display = "none";
+               n[2].style.display = "none";
+               n[3].style.display = "none";
+                   }else{
+    if(diasSemana[f.getDay()]=="Viernes"){
+                var n = document.getElementsByName('a2');
+              
+               n[1].style.display = "none";
+               n[2].style.display = "none";
+               n[3].style.display = "none";
+                   }
+                       }
+     if(diasSemana[f.getDay()]=="Sábado"){
+                var n = document.getElementsByName('a2');
+              
+               
+               n[0].style.display = "none";
+               n[1].style.display = "none";
+               n[2].style.display = "none";
+         
+                   }else{
+    
+        if(diasSemana[f.getDay()]=="Domingo"){
+                var n = document.getElementsByName('a2');
+              
+               
+               n[1].style.display = "none";
+               n[2].style.display = "none";
+               n[3].style.display = "none";
+         
+                   }
+                       }
+           
+    </script>
