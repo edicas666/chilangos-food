@@ -56,7 +56,7 @@ var conexion;
 function inicializar(e){
         conexion = openDatabase('comida','1.0','Chilangos_Food',2*1024*1024);//2*1024*1024 = 2MB
         crearTablas();
-        insertarProductos(1, "Hamburguesa", "../img/hamburguesa.png","Hamburguesa de arrachera", 25.00, 5);
+        insertarProductos(1, "Hamburguesa", "../img/hamburguesa.png","Hamburguesa de arrachera", 25.00);
         insertarProductos(2, "Torta", "../img/torta.png","Torta de Queso, jamon y chorizo", 30.00);
         insertarProductos(3, "Alitas", "../img/alitas.png","Alitas adobadas con picante", 20.00);
         insertarProductos(4, "Costillitas", "../img/costillitas.png","Costillitas a la BBQ con picante", 40.00);

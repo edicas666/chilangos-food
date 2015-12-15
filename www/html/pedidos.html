@@ -31,13 +31,20 @@
             <div class="row footer">
                    <p class="col-xs-1" style="top:3px;">$</p><input type="text" readonly class="col-xs-3" value="0.00">
                    <a class="btn btn-danger" href="productos.html">Regresar</a>
-                   <input type="submit" class="btn btn-success" value="Siguiente">
+                   <input type="button" class="btn btn-success" value="Siguiente" onclick="servDom()">
             </div>
          </form>
 </body>
 </html>
 <script>
     conProd();
+    
+    function servDom(){
+        var dir = window.location.search.substr(3);
+        var cad = dir.slice(0,dir.length-1);
+        cad = cad.split("-");
+        window.location = "../html/servdom.html?x="+cad;
+    }
     
     function conProd(){
         var conexion = openDatabase('comida','1.0','Chilangos_Food',2*1024*1024);
@@ -47,7 +54,6 @@
                 var dir = window.location.search.substr(3);
                 cad = dir.slice(0,dir.length-1);
                 cad = cad.split("-");
-                var html = "Hola";
                 for(var i=0;i<cad.length;i++){
                     bd.executeSql(
                         "select * from productos where id_producto=?",[cad[i]+".0"],
@@ -55,17 +61,17 @@
                             document.getElementById('contenedorPedidos').innerHTML+="<!--Comienza-->"+
                 "<div id='id'class='row' style='box-shadow: 0px 0px 10px black; width:100%; margin:0 auto;"+ "margin-top: 10px; margin-bottom: 10px; padding:5px;'>"+
                     "<h3 style='margin-left:10px; margin-top:5px;'>"+res.rows.item(0).nombre+"</h3>"+
-                    "<img src='../img/torta.jpg' class='col-xs-5'>"+
+                    "<img src='"+res.rows.item(0).url_img+"' class='col-xs-5'>"+
                     "<div class='col-xs-6'>"+
                         "<p >Precio: $25.00</p>"+
-                        "<p id='descripcion' style='font-family: cursive;'>Jamon, queso, piña, chorizo</p>"+
+                        "<p id='descripcion' style='font-family: cursive;'>"+res.rows.item(0).descripcion+"</p>"+
                     "</div>"+
                     "<div style='margin-left:10px;'>"+
                         "<p><h4>¿Con todos los ingredientes?</h4></p>"+
                         "<textarea id='coments' cols='33' rows='5'></textarea>"+
-                    "</div>"+
-                    "<a class='btn btn-danger' href='#' style='float: right; margin-right:10px;'>Eliminar</a>"+
-                "</div>"+
+                    //"</div>"+
+                    //"<a class='btn btn-danger' href='#' style='float: right; margin-right:10px;'>Eliminar</a>"+
+                    //"</div>"+
                 "<hr>"+
                 "<!--Termina-->";
                     });

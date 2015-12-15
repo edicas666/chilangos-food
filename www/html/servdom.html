@@ -28,7 +28,7 @@
            <div class="row" style="height:auto;">
               Telefono: <br>
               <input type="tel" class="col-xs-11" required>
-              <br> <br>
+              <br><br>
               Direccion: <br>
               <input type="text" class="col-xs-11" required>
               <br> <br>
@@ -38,7 +38,13 @@
        </div>
        <div class="row footer">
                <a class="btn btn-danger" href="pedidos.html">Regresar</a>
-               <a class="btn btn-success" href="pago.html">Siguiente</a>
+               <input class="btn btn-success" value="Siguiente" onclick="aPago()">
        </div>
 </body>
 </html>
+<script>
+    function aPago(){
+        var dir = window.location.search.substr(3);
+        window.location = "../html/pago.html?x="+dir;
+    }
+</script>
