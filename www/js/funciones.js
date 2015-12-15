@@ -226,13 +226,3 @@ function eliminarUsuario(id){
         );
     }
 }
-
-//Crearcion de venta
-function crearVenta(){
-    var fecha = new Date();
-    conexion.transaction(
-        function(bd){
-            bd.executeSql("insert into ventas values(?,?,?,?,?)",[null,"001","1.0",25.0,fecha.getUTCFullYear()+"-"+fecha.getMonth()+"-"+fecha.getDay()],function(){alert("Operación exitosa")},function(){alert("Erro en la operación")});
-        }
-    );
-}

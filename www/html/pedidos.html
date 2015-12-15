@@ -42,7 +42,6 @@
     function servDom(){
         var dir = window.location.search.substr(3);
         var cad = dir.slice(0,dir.length-1);
-        cad = cad.split("-");
         window.location = "../html/servdom.html?x="+cad;
     }
     
