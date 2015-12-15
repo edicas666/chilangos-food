@@ -8,23 +8,23 @@
  * Copyright (c) 2015 Daniel Eden
  */
 #panel {
-  background-color: #90d174;
-  border: 4px solid #7aa069;
+  box-shadow: 0px 0px 15px #000000;
   height: 155px;
   width: 120px;
   display: inline-block;
   text-align: center;
-  background-color: #ebadad;
+    background-color: rgba(0, 10, 255, 0.44);
 }
 #panelMaster {
   margin-top: 20%;
   position: fixed;
+    z-index: 5;
   left: -120px;
   display: inline-flex;
 }
 .btnP {
   margin-top: 10px;
-  background-color: rgba(220, 20, 60, 0.87) !important;
+  background-color: rgb(132, 129, 129) !important;
 }
 #btnPanel {
   margin-top: 60px;

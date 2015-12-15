@@ -159,10 +159,10 @@ function enviar_a_pedidos(id){
         var cadena ="";
          for(var i = 0; i<id.length;i++){
              for(var j = 0;j<parseInt(cant[i].value);j++){
-                cadena += id[i].value.charAt(0)+",";
+                cadena += id[i].value.charAt(0)+"-";
              }
          }
-        window.location = "../html/pedidos.html?x="+cadena;
+        window.location = "../html/pedidos.html?x="+cadena.slice(0,cadena.length-1)+",";
     }else{
         alert('No has elegido nada');
     }
