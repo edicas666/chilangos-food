@@ -112,11 +112,11 @@ function insertarProductos(id,nombre,url,desc,precio){
 }
 
 function ok(){
-    alert("La operación se ah realizado correctamente");
+    //alert("La operación se ah realizado correctamente");
 }
 
 function error(){
-    alert("Ah ocurrido un error en la operación");
+    //alert("Ah ocurrido un error en la operación");
 }
 
 function consultarProductos(){
