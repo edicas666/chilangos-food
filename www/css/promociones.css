@@ -30,7 +30,7 @@ strong{
 
 
 #principal{
-    width: 100%;
+    width: 98%;
     font-family: Times New Roman;
     
 }
@@ -38,19 +38,19 @@ strong{
 #promo{
     position: relative;
     margin-top: 10%;
-    width: 100%;
+    width: 98%;
     border-radius: 10px;
     box-shadow: yellow 5px 5px 5px;
 }
 #promo li{
     background-color: rgba(245, 20, 20, 0.74);
-    width: 100%;
+    width: 98%;
     position: absolute;
     top: 0;
     left: 0;
 }
 #slider li img{
-width: 100%;
+width: 98%;
 }
 
 #promo > img{
