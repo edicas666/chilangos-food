@@ -133,7 +133,7 @@ function consultarProductos(){
                     for(var i=0;i<tam;i++){
                         html+="<!--Comienza-->"+
               "<div class='row' style='box-shadow: 0px 0px 10px black; width:100%; margin:0 auto; margin-top: 10px;"+ "margin-bottom: 10px;'>"+
-                   "<input type='hidden' id='id_producto' value='"+res.rows.item(i).id_producto+"'>"+
+                   "<input type='hidden' name='id_producto' value='"+res.rows.item(i).id_producto+"'>"+
                    "<h3 id='nombreP' style='margin-left:10px; margin-top:5px;'>"+res.rows.item(i).nombre+"</h3>"+
                    "<img src='"+res.rows.item(i).url_img+"' class='col-xs-5' width=100 height=100>"+
                    "<div class='col-xs-6'>"+
@@ -141,7 +141,7 @@ function consultarProductos(){
                        "<p id='descP' style='font-family: cursive;'>"+res.rows.item(i).descripcion+"</p>"+
                    "</div>"+
                    "<h4 class='col-xs-4'>Cantidad:</h4>"+
-                   "<input name='producto' required pattern='[0-9]{1}' maxlength='2' placeholder='5' type='tel' class='col-xs-2'"+ "style='margin-top:7px' value='0' required>"+
+                   "<input name='cantidad_producto' required pattern='[0-9]{1}' maxlength='2' placeholder='5' type='tel' class='col-xs-2'"+ "style='margin-top:7px' value='0' required>"+
                "</div>"+
                "<hr>"+
                "<!--Termina-->";
@@ -156,15 +156,22 @@ function consultarProductos(){
 
 function enviar_a_pedidos(id){
     if(escogioProducto()){
-        
-        window.location = "../html/pedidos.html?x="+id;
+        var id = document.getElementsByName('id_producto');
+        var cant = document.getElementsByName('cantidad_producto');
+        var cadena ="";
+         for(var i = 0; i<id.length;i++){
+             for(var j = 0;j<parseInt(cant[i].value);j++){
+                cadena += id[i].value.charAt(0)+",";
+             }
+         }
+        window.location = "../html/pedidos.html?x="+cadena;
     }else{
         alert('No has elegido nada');
     }
 }
 
 function escogioProducto(){
-    var elementos = document.getElementsByName('producto');
+    var elementos = document.getElementsByName('cantidad_producto');
     for(var i = 0;i<elementos.length;i++){
         if(elementos[i].value != 0) return true;
     }

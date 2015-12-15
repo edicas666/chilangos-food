@@ -51,3 +51,14 @@
          </form>
 </body>
 </html>
+<script>
+  var dir = window.location.search.substr(3);
+    alert(dir);
+  if(dir!=null || dir.length>0){
+    dir = new String(dir);
+    var valor = dir.substring(dir.indexOf("=")+1);
+    var caja = document.getElementById("id");
+    caja.value = valor;
+    inicializar();
+  }
+</script>
