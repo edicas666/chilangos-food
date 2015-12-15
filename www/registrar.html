@@ -54,11 +54,12 @@
         var email = document.getElementById('emailReg').value;
         var btn = document.getElementById('aceptarReg');
         var ret = document.getElementById('regresar');
+        var fecha = new Date().toLocaleDateString();
         if(id.length!=0 && pass.length!=0 && email.length!=0){
             conexion = openDatabase('comida','1.0','Chilangos_Food',2*1024*1024);//2*1024*1024 = 2MB
             conexion.transaction(
                     function(bd){
-                        bd.executeSql("insert into usuarios values(?,?,?)",[id,pass,email],function(){alert('Registro Exitoso! Bienvenido! ');form.action = "../www/principal.html"; window.location="principal.html";}, function(){alert('Error en el registro');});
+                        bd.executeSql("insert into usuarios values(?,?,?,?)",[id,pass,email,fecha],function(){alert('Registro Exitoso! Bienvenido! ');form.action = "../www/principal.html"; window.location="principal.html";}, function(){alert('Error en el registro');});
                     }
                 );
         }
