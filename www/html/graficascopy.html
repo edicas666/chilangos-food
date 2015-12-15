@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+    <title>Graficas</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src="../bootstrap/js/bootstrap.min.js" ></script>
+    <script src="../bootstrap/js/bootstrap.js" ></script>
+    <script src="../js/funciones.js"></script>
+    <link rel="stylesheet" href="../css/visitanos.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="icon" href="../img/logo.png">
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="../js/funciones.js">
+    </script>
+    
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui-1.7.2.custom.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+<script type="text/javascript">
+jQuery(function($){
+	$.datepicker.regional['es'] = {
+		closeText: 'Cerrar',
+		prevText: '&#x3c;Ant',
+		nextText: 'Sig&#x3e;',
+		currentText: 'Hoy',
+		monthNames: ['Enero','Febrero','Marzo','Abril','Mayo','Junio',
+		'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+		monthNamesShort: ['Ene','Feb','Mar','Abr','May','Jun',
+		'Jul','Ago','Sep','Oct','Nov','Dic'],
+		dayNames: ['Domingo','Lunes','Martes','Mi&eacute;rcoles','Jueves','Viernes','S&aacute;bado'],
+		dayNamesShort: ['Dom','Lun','Mar','Mi&eacute;','Juv','Vie','S&aacute;b'],
+		dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','S&aacute;'],
+		weekHeader: 'Sm',
+		dateFormat: 'dd/mm/yy',
+		firstDay: 1,
+		isRTL: false,
+		showMonthAfterYear: false,
+		yearSuffix: ''};
+	$.datepicker.setDefaults($.datepicker.regional['es']);
+});    
+ 
+$(document).ready(function() {
+   $("#datepicker").datepicker();
+ });
+    
+</script>
+
+<script type="text/javascript">
+jQuery(function($){
+	$.datepicker.regional['es'] = {
+		closeText: 'Cerrar',
+		prevText: '&#x3c;Ant',
+		nextText: 'Sig&#x3e;',
+		currentText: 'Hoy',
+		monthNames: ['Enero','Febrero','Marzo','Abril','Mayo','Junio',
+		'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+		monthNamesShort: ['Ene','Feb','Mar','Abr','May','Jun',
+		'Jul','Ago','Sep','Oct','Nov','Dic'],
+		dayNames: ['Domingo','Lunes','Martes','Mi&eacute;rcoles','Jueves','Viernes','S&aacute;bado'],
+		dayNamesShort: ['Dom','Lun','Mar','Mi&eacute;','Juv','Vie','S&aacute;b'],
+		dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','S&aacute;'],
+		weekHeader: 'Sm',
+		dateFormat: 'dd/mm/yy',
+		firstDay: 1,
+		isRTL: false,
+		showMonthAfterYear: false,
+		yearSuffix: ''};
+	$.datepicker.setDefaults($.datepicker.regional['es']);
+});    
+ 
+$(document).ready(function() {
+   $("#datepicker2").datepicker();
+ });
+    
+</script>
+
+
+</head>
+<body onload="inicializar3()">
+    <header class="animated zoomIn retraso-1">
+    <h1>
+    <strong>
+       CANTIDAD DE PLATILLOS PEDIDOS
+    </strong>
+    </h1>
+    <hr>   
+   </header>
+      <div id="contenedor"class="container-fluid animated zoomIn retraso-3 col-xs-offset-1" style="height: auto; width:90%; padding: 0; margin-left:20px;">
+        <form action="../html/index.html" style="box-shadow: 0px 0px 10px black; width: 100%; left:10; padding: 10px;">              
+        <div class="container">
+        PLATILLOS PEDIDOS: <br>
+        <form action="">
+  <label style="float:left">DE:</label>
+  <input type="text" name="datepicker" id="datepicker" readonly="readonly" size="6" class="col-xs-3"/>
+</form>
+<form action="">
+  <label>A:</label>
+  <input type="text" name="datepicker" id="datepicker2" readonly="readonly" size="6"/>
+  <button onclick="consultar3()" class="btn btn-success" type="button">VER</button>
+</form>        
+         <table class="table">
+            <thead>
+                <tr>
+                    <th>NOMBRE</th>
+                    <th>FECHA DE VENTA</th>
+                </tr>
+            </thead>
+            <tbody id="tcontenido">
+                
+            </tbody>
+         </table>
+        </div>
+ 
+       </div>
+       <div class="row footer">
+        <a class="btn btn-danger col-xs-offset-1"  href="../index.html">Regresar</a>
+        </div>
+        </form>
+</body>
+</html>

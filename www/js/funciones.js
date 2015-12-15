@@ -226,3 +226,49 @@ function eliminarUsuario(id){
         );
     }
 }
+
+//estadistica
+var conexion3;
+
+function inicializar3(){
+    
+    conexion3 = openDatabase(
+    'comida','1.0','Chilangos_Food',2*1024*1024);
+
+ //   conexion3.transaction(
+ //           function(bd){
+// bd.executeSql("insert into ventas values(?,?,?,?,?)",["05","001","1.0",25.0,"25/12/2015"],function(){alert("yes")},function(){alert("no")});
+      //      }
+     //   );  
+    
+  consultar3();
+}
+
+function consultar3(){
+ conexion3.transaction(
+     function(bd){
+      bd.executeSql(
+          var cal1= document.getElementById("").value;         
+         var cal1=document.getElementById("datepicker").value;
+         var cal2=document.getElementById("datepicker2").value;  
+         alert("yes");
+"select nombre,fecha_ventas from productos,ventas where productos.id_productos=ventas.id_productos and ventas.id_ventas=ventas.id_ventas and ventas.fecha_ventas BETWEEN" +cal1.value+"and"+cal2.value,[], function(bd,res){
+        var tam = res.rows.length;
+          var html = "";
+          for( var i=0; i<tam;i++){
+              html+="<tr><td>"+res.rows.item(i).nombre+
+                  "</td><td>"+res.rows.item(i).fecha_ventas+
+                  "</td><td></tr>";
+              
+          }
+          var con3 = document.getElementById("tcontenido");
+         if(con3!=null) 
+        con3.innerHTML = html;
+      }
+      
+      );   
+         
+     }
+ 
+ );   
+}
