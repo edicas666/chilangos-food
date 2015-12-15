@@ -81,7 +81,7 @@ function crearTablas(){
             function(bd){
                 bd.executeSql(
                     "create table if not exists ventas("+
-                    "id_ventas text primary key,"+
+                    "id_ventas integer primary key autoincrement,"+
                     "folio_pedido text,"+
                     "id_producto text,"+
                     "total double,"+
@@ -231,7 +231,7 @@ function eliminarUsuario(id){
 function crearVenta(){
     conexion.transaction(
         function(bd){
-            bd.executeSql("insert into ventas values(?,?,?,?,?)",["05","001","1.0",25.0,"25/12/2015"],function(){alert("Operación exitosa")},function(){alert("Erro en la operación")});
+            bd.executeSql("insert into ventas values(?,?,?,?,?)",[null,"001","1.0",25.0,"25/12/2015"],function(){alert("Operación exitosa")},function(){alert("Erro en la operación")});
         }
     );
 }
